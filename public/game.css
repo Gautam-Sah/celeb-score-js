@@ -1,63 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
-html,
-body {
-  font-family: 'Parkinsans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+* {
+  font-family: "Parkinsans", sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%;
   box-sizing: border-box;
   position: relative;
 }
 .container {
+  outline: none;
   display: flex;
   justify-content: space-evenly;
+  text-shadow: 0 0 0.5px whitesmoke;
 }
-.half_2,
-.half_1 {
-  width: 300px;
-  height: auto;
-  border: 3px solid red;
+.right,
+.left {
+  width: 100%;
+  height: 100vh;
+  padding-top: 15%;
+  /* border: 3px solid red; */
   display: flex;
   flex-direction: column;
-  align-self: center;
   text-align: center;
   font-size: 25px;
-  padding: 50px 50px 0 50px;
+  line-height: 40px;
 }
-#vs {
-  margin-top: 20%;
-  font-size: 50px;
-  border: 3px solid black;
-  width: fit-content;
-  height: fit-content;
-  padding: 5px;
-  border-radius: 50%;
-}
+
 .has {
   font-weight: 400;
   font-size: smaller;
 }
-.number-1,
-.number-2 {
+.score-1,
+.score-2 {
   font-size: xx-large;
   color: brown;
+}
+.desc {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 25px;
 }
 #name-1,
 #name-2 {
   font-size: 45px;
 }
 .footer {
+  color: #fff;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 300px;
-  border: 2px solid red;
+  width: 100%;
+  /* border: 2px solid red; */
 }
 .bn16 {
-  width: 100px;
-  margin-top: 5%;
+  cursor: pointer;
+  width: 150px;
+  margin-bottom: 2%;
   font-weight: bold;
   font-size: 1em;
   text-align: center;
@@ -69,6 +69,7 @@ body {
   position: relative;
   border: 3px solid #090909;
   border-radius: 25px;
+  background: transparent;
 }
 @media screen {
 }
