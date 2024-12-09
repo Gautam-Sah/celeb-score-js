@@ -1,26 +1,26 @@
-let name_1 = document.querySelector("#name-1")
-let name_2 = document.querySelector("#name-2")
-let name_3 = document.querySelector("#name-3")
-let score_1 = document.querySelector(".score-1")
-let score_2 = document.querySelector(".score-2")
-let changes = document.querySelector(".change")
-let Right = document.querySelector(".right")
-let Left = document.querySelector(".left")
+let name_1 = document.querySelector('#name-1')
+let name_2 = document.querySelector('#name-2')
+let name_3 = document.querySelector('#name-3')
+let score_1 = document.querySelector('.score-1')
+let score_2 = document.querySelector('.score-2')
+let changes = document.querySelector('.change')
+let Right = document.querySelector('.right')
+let Left = document.querySelector('.left')
 let score2 = 0
 let person_2
 // Function to fetch game data
 async function Game() {
   try {
-    URL = "http://localhost:3000/api/v1/game"
+    URL = 'http://localhost:3000/api/v1/game'
     const response = await fetch(URL, {
-      method: "POST",
+      method: 'POST',
     })
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
 
     const data = await response.json()
-    console.log("Fetched Game Data:", data)
+    console.log('Fetched Game Data:', data)
     //const score1 = 100
     score2 = Math.round(data.game.searchScore * 1000) / 1000
     console.log(score2)
@@ -30,8 +30,8 @@ async function Game() {
     // name_2.textContent = person_2
     // name_3.textContent = person_1
     // const picture = () => {
-    //   Left.style.backgroundImage = `url("./images/${person_1}.jpeg")`
-    //   Right.style.backgroundImage = `url("./images/${person_2}.jpeg")`
+    //   Left.style.backgroundImage = url("./images/${person_1}.jpeg")
+    //   Right.style.backgroundImage = url("./images/${person_2}.jpeg")
     // }
     // picture()
     // const more = score1 > score2 ? score1 : score2
@@ -55,7 +55,7 @@ async function Game() {
     //       <br />
     //     </p>`
     //       Game()
-    //       Right.style.backgroundImage = `url("./images/${person_2}.jpeg")``<p>
+    //       Right.style.backgroundImage = url("./images/${person_2}.jpeg")`<p>
     //       <span id="name-2">"${person_2}"</span><br />
     //       <span class="has">has</span>
     //     </p>
@@ -87,7 +87,7 @@ async function Game() {
     //     if (less == value) {
     //       console.log("win")
 
-    //       Left.style.backgroundImage = `url("./images/${person_2}.jpeg")`
+    //       Left.style.backgroundImage = url("./images/${person_2}.jpeg")
     //       Game()`<p>
     //       <span id="name-1">"${person_1}"</span><br />
     //       <span class="has">has</span><br />
@@ -95,7 +95,7 @@ async function Game() {
     //       <br />score out of100
     //       <br />
     //     </p>`
-    //       Right.style.backgroundImage = `url("./images/${person_2}.jpeg")`` <span id="name-2">"${person_2}"</span><br />
+    //       Right.style.backgroundImage = url("./images/${person_2}.jpeg")` <span id="name-2">"${person_2}"</span><br />
     //       <span class="has">has</span>
     //     </p>
     //     <div class="result">
@@ -115,7 +115,7 @@ async function Game() {
     //   }, 3000)
     // }
   } catch (error) {
-    console.error("Error fetching game data:", error)
+    console.error('Error fetching game data:', error)
   }
 }
 Game()
